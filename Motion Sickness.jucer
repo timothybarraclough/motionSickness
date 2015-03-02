@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="NuiYTK" name="Motion Sickness" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.KingBob.MotionSickness" buildVST="0" buildAU="1"
+              pluginName="Motion Sickness" pluginDesc="Canadian Warble Simulator"
+              pluginManufacturer="King Bob" pluginManufacturerCode="King" pluginCode="KbMs"
+              pluginChannelConfigs="{1, 1}, {2, 2}" pluginIsSynth="0" pluginWantsMidiIn="0"
+              pluginProducesMidiOut="0" pluginSilenceInIsSilenceOut="0" pluginEditorRequiresKeys="0"
+              pluginAUExportPrefix="MotionSicknessAU" pluginRTASCategory=""
+              aaxIdentifier="com.yourcompany.MotionSickness" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
+              jucerVersion="3.1.0">
+  <MAINGROUP id="EcaMDp" name="Motion Sickness">
+    <GROUP id="{AC0E5FE3-3BD4-11F1-A377-65466E389790}" name="Source">
+      <FILE id="JHvx8s" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="rjHf4X" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="uvzadw" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="EWfym0" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_audio" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" juceFolder="/Developer/JUCE/modules"
+               postbuildCommand="# Fix info.plist for AUs built with Xcode 3&#10;if [ $copyAU -gt 0 ]; then&#10;  if [ -f &quot;$DEVELOPER_DIR/Library/Developer/CoreAudio/AudioUnits/AUPublic/AUBase/AUPlugInDispatch.cpp&quot; ]; then&#10;    OLD_AU=0&#10;  else&#10;    OLD_AU=1&#10;  fi&#10;&#10;  if [ $OLD_AU -gt 0 ]; then&#10;    echo &quot;Removing AudioComponents entry from Info.plist because this is not a new-format AU&quot;&#10;    /usr/libexec/PlistBuddy -c &quot;Delete AudioComponents&quot; &quot;$original/Contents/Info.plist&quot;&#10;  fi&#10;fi">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="10.6 SDK" osxCompatibility="10.6 SDK" osxArchitecture="32BitUniversal"
+                       isDebug="1" optimisation="1" targetName="Motion Sickness"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="32BitUniversal"
+                       isDebug="0" optimisation="2" targetName="Motion Sickness"/>
+      </CONFIGURATIONS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+</JUCERPROJECT>

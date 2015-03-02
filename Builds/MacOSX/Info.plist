@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist>
+  <dict>
+    <key>CFBundleExecutable</key>
+    <string>${EXECUTABLE_NAME}</string>
+    <key>CFBundleIconFile</key>
+    <string></string>
+    <key>CFBundleIdentifier</key>
+    <string>com.KingBob.MotionSickness</string>
+    <key>CFBundleName</key>
+    <string>Motion Sickness</string>
+    <key>CFBundlePackageType</key>
+    <string>TDMw</string>
+    <key>CFBundleSignature</key>
+    <string>PTul</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1.0.0</string>
+    <key>NSHumanReadableCopyright</key>
+    <string></string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>AudioComponents</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>King Bob: Motion Sickness</string>
+        <key>description</key>
+        <string>Canadian Warble Simulator</string>
+        <key>factoryFunction</key>
+        <string>MotionSicknessAUFactory</string>
+        <key>manufacturer</key>
+        <string>King</string>
+        <key>type</key>
+        <string>aufx</string>
+        <key>subtype</key>
+        <string>KbMs</string>
+        <key>version</key>
+        <integer>65536</integer>
+      </dict>
+    </array>
+  </dict>
+</plist>
